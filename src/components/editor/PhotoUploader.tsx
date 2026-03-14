@@ -106,9 +106,7 @@ export function PhotoUploader({ value, fullName, onChange }: PhotoUploaderProps)
               className="h-full w-full object-cover"
             />
           ) : (
-            <div className="px-4 text-center text-xs leading-5 text-slate-400">
-              上传后会在简历头部显示
-            </div>
+            <div className="px-4 text-center text-xs leading-5 text-slate-400">上传后会在简历头部显示</div>
           )}
         </div>
 
@@ -156,4 +154,3 @@ export function PhotoUploader({ value, fullName, onChange }: PhotoUploaderProps)
     </div>
   );
 }
-

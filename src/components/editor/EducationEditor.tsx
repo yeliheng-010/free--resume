@@ -53,36 +53,11 @@ export function EducationEditor({ items, onChange }: EducationEditorProps) {
           onDelete={() => deleteItem(item.id)}
         >
           <div className="grid gap-3 sm:grid-cols-2">
-            <FormInput
-              label="学校"
-              value={item.school}
-              onChange={(value) => onChange(updateItem(items, index, { school: value }))}
-              placeholder="Tongji University"
-            />
-            <FormInput
-              label="学历"
-              value={item.degree}
-              onChange={(value) => onChange(updateItem(items, index, { degree: value }))}
-              placeholder="Bachelor"
-            />
-            <FormInput
-              label="专业"
-              value={item.major}
-              onChange={(value) => onChange(updateItem(items, index, { major: value }))}
-              placeholder="Software Engineering"
-            />
-            <FormInput
-              label="开始时间"
-              value={item.startDate}
-              onChange={(value) => onChange(updateItem(items, index, { startDate: value }))}
-              placeholder="2018.09"
-            />
-            <FormInput
-              label="结束时间"
-              value={item.endDate}
-              onChange={(value) => onChange(updateItem(items, index, { endDate: value }))}
-              placeholder="2022.06 / Present"
-            />
+            <FormInput label="学校" value={item.school} onChange={(value) => onChange(updateItem(items, index, { school: value }))} placeholder="Tongji University" />
+            <FormInput label="学历" value={item.degree} onChange={(value) => onChange(updateItem(items, index, { degree: value }))} placeholder="Bachelor" />
+            <FormInput label="专业" value={item.major} onChange={(value) => onChange(updateItem(items, index, { major: value }))} placeholder="Software Engineering" />
+            <FormInput label="开始时间" value={item.startDate} onChange={(value) => onChange(updateItem(items, index, { startDate: value }))} placeholder="2018.09" />
+            <FormInput label="结束时间" value={item.endDate} onChange={(value) => onChange(updateItem(items, index, { endDate: value }))} placeholder="2022.06 / Present" />
           </div>
 
           <FormTextarea
@@ -102,4 +77,3 @@ export function EducationEditor({ items, onChange }: EducationEditorProps) {
     </EditorSection>
   );
 }
-

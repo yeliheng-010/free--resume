@@ -102,7 +102,7 @@ export function useResumeBuilder(): UseResumeBuilderResult {
   const shouldSkipNextSave = useRef(true);
   const [saveState, setSaveState] = useState<SaveState>({
     kind: "ready",
-    message: "已载入示例数据",
+    message: "已加载示例数据",
   });
 
   useEffect(() => {
@@ -137,7 +137,7 @@ export function useResumeBuilder(): UseResumeBuilderResult {
           localStorage.removeItem(LEGACY_TEMPLATE_STORAGE_KEY);
           setSaveState({
             kind: "info",
-            message: "已迁移旧版本地数据",
+            message: "已迁移旧版本本地数据",
           });
         }
       }
@@ -409,4 +409,3 @@ export function useResumeBuilder(): UseResumeBuilderResult {
     exportActiveResumeJson,
   };
 }
-

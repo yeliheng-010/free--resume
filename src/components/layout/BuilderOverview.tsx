@@ -24,7 +24,7 @@ export function BuilderOverview({ counts, storageMessage }: BuilderOverviewProps
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-400">Workspace</p>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900">Build, compare, and tailor resumes fast</h2>
           <p className="mt-2 text-sm leading-6 text-slate-600">
-            现在你可以在同一个工作区里维护多个岗位版本，切换语言、模板、主题色，并通过 JSON 进行备份或迁移。
+            现在你可以在同一个工作区里维护多个岗位版本，切换语言、模板和主题色，并通过 JSON 进行备份或迁移。
           </p>
         </div>
         <div className="rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3 text-sm text-sky-800">{storageMessage}</div>
@@ -42,4 +42,3 @@ export function BuilderOverview({ counts, storageMessage }: BuilderOverviewProps
     </section>
   );
 }
-

@@ -51,4 +51,3 @@ export function SectionOrderEditor({ language, order, onMove }: SectionOrderEdit
     </section>
   );
 }
-

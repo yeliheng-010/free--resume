@@ -11,7 +11,7 @@ const featureCards = [
   },
   {
     title: "JSON 备份迁移",
-    description: "支持导入 / 导出 JSON 简历数据，方便跨设备备份、恢复或共享简历内容。",
+    description: "支持导入 / 导出 JSON 简历数据，方便跨设备备份、恢复或分享简历内容。",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function HomePage() {
               <div className="mt-5 grid gap-4 md:grid-cols-2">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
                   <div className="text-sm font-semibold">Resume versions by role</div>
-                  <p className="mt-2 text-sm leading-6 text-slate-300">为同一个人维护多份针对不同岗位的简历，而不是反复覆盖一份内容。</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-300">为同一个人维护多份针对不同岗位的简历，而不是反复覆盖同一份内容。</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
                   <div className="text-sm font-semibold">Theme + template + language</div>
@@ -87,7 +87,7 @@ export default function HomePage() {
             <div className="rounded-2xl border border-slate-200 bg-white/90 p-5">
               <div className="text-3xl font-semibold tracking-tight text-slate-950">2</div>
               <div className="mt-2 text-sm font-medium text-slate-700">专业模板</div>
-              <p className="mt-1 text-sm leading-6 text-slate-500">Classic 与 Modern 两套模板，保持 ATS-friendly，同时保持视觉差异。</p>
+              <p className="mt-1 text-sm leading-6 text-slate-500">Classic 与 Modern 两套模板，保持 ATS-friendly，同时保留视觉差异。</p>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-white/90 p-5">
               <div className="text-3xl font-semibold tracking-tight text-slate-950">3</div>
@@ -105,4 +105,3 @@ export default function HomePage() {
     </main>
   );
 }
-

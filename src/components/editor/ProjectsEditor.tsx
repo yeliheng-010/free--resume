@@ -54,30 +54,10 @@ export function ProjectsEditor({ items, onChange }: ProjectsEditorProps) {
           onDelete={() => deleteItem(item.id)}
         >
           <div className="grid gap-3 sm:grid-cols-2">
-            <FormInput
-              label="项目名称"
-              value={item.name}
-              onChange={(value) => onChange(updateItem(items, index, { name: value }))}
-              placeholder="AI Interview Assistant"
-            />
-            <FormInput
-              label="角色"
-              value={item.role}
-              onChange={(value) => onChange(updateItem(items, index, { role: value }))}
-              placeholder="Frontend Lead"
-            />
-            <FormInput
-              label="开始时间"
-              value={item.startDate}
-              onChange={(value) => onChange(updateItem(items, index, { startDate: value }))}
-              placeholder="2024.02"
-            />
-            <FormInput
-              label="结束时间"
-              value={item.endDate}
-              onChange={(value) => onChange(updateItem(items, index, { endDate: value }))}
-              placeholder="2024.06 / Present"
-            />
+            <FormInput label="项目名称" value={item.name} onChange={(value) => onChange(updateItem(items, index, { name: value }))} placeholder="AI Interview Assistant" />
+            <FormInput label="角色" value={item.role} onChange={(value) => onChange(updateItem(items, index, { role: value }))} placeholder="Frontend Lead" />
+            <FormInput label="开始时间" value={item.startDate} onChange={(value) => onChange(updateItem(items, index, { startDate: value }))} placeholder="2024.02" />
+            <FormInput label="结束时间" value={item.endDate} onChange={(value) => onChange(updateItem(items, index, { endDate: value }))} placeholder="2024.06 / Present" />
           </div>
 
           <FormTextarea
@@ -86,7 +66,7 @@ export function ProjectsEditor({ items, onChange }: ProjectsEditorProps) {
             rows={5}
             value={arrayToLines(item.description)}
             onChange={(value) => onChange(updateItem(items, index, { description: linesToArray(value) }))}
-            placeholder="例如：\nDesigned the interview simulation workflow.\nImplemented responsive charts for score analysis."
+            placeholder={"例如：\nDesigned the interview simulation workflow.\nImplemented responsive charts for score analysis."}
           />
 
           <FormInput
@@ -105,4 +85,3 @@ export function ProjectsEditor({ items, onChange }: ProjectsEditorProps) {
     </EditorSection>
   );
 }
-

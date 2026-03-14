@@ -50,12 +50,7 @@ export function SkillsEditor({ items, onChange }: SkillsEditorProps) {
           onDelete={() => deleteItem(item.id)}
         >
           <div className="grid gap-3 sm:grid-cols-2">
-            <FormInput
-              label="分类"
-              value={item.category}
-              onChange={(value) => onChange(updateItem(items, index, { category: value }))}
-              placeholder="Programming"
-            />
+            <FormInput label="分类" value={item.category} onChange={(value) => onChange(updateItem(items, index, { category: value }))} placeholder="Programming" />
             <FormInput
               label="技能项"
               helper="逗号分隔"
@@ -73,4 +68,3 @@ export function SkillsEditor({ items, onChange }: SkillsEditorProps) {
     </EditorSection>
   );
 }
-

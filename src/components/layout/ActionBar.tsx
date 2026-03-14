@@ -89,4 +89,3 @@ export function ActionBar({ saveState, onReset, onExportPdf, onImportJson, onExp
     </header>
   );
 }
-

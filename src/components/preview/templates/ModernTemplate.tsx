@@ -23,6 +23,7 @@ export function ModernTemplate({ resume }: ModernTemplateProps) {
   const { basics, education, work, projects, skills } = resume.data;
   const titles = sectionLabels[resume.language];
   const hasContent = hasMeaningfulContent(resume.data);
+  const techLabel = resume.language === "zh" ? "技术栈" : "Tech";
 
   const sectionRenderers: Record<ResumeSectionKey, React.ReactNode | null> = {
     summary: basics.summary ? (
@@ -78,7 +79,7 @@ export function ModernTemplate({ resume }: ModernTemplateProps) {
               ) : null}
               {item.technologies.length > 0 ? (
                 <p className="mt-2 text-slate-700">
-                  <span className="font-semibold">Tech:</span> {item.technologies.join(", ")}
+                  <span className="font-semibold">{techLabel}:</span> {item.technologies.join(", ")}
                 </p>
               ) : null}
             </article>
@@ -135,7 +136,7 @@ export function ModernTemplate({ resume }: ModernTemplateProps) {
           </div>
         ) : null}
 
-        <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-400">Resume</p>
+        <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-400">{resume.language === "zh" ? "简历" : "Resume"}</p>
         <h1 className="mt-3 text-[30px] font-semibold leading-tight tracking-tight" style={{ color: "var(--resume-accent)" }}>
           {basics.name || "Your Name"}
         </h1>
@@ -182,4 +183,3 @@ export function ModernTemplate({ resume }: ModernTemplateProps) {
     </div>
   );
 }
-

@@ -3,7 +3,7 @@ import type { CSSProperties } from "react";
 import type { ResumeLanguage, ResumeSectionKey, ResumeTemplate, ResumeTheme } from "@/types/resume";
 
 export const languageOptions: Array<{ value: ResumeLanguage; label: string; helper: string }> = [
-  { value: "zh", label: "中文", helper: "中文标题与模块名" },
+  { value: "zh", label: "中文", helper: "中文标题与模块名称" },
   { value: "en", label: "English", helper: "English headings and labels" },
 ];
 
@@ -70,4 +70,3 @@ const themeStyles: Record<ResumeTheme, CSSProperties> = {
 export function getThemeStyle(theme: ResumeTheme): CSSProperties {
   return themeStyles[theme];
 }
-

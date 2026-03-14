@@ -27,7 +27,9 @@ export function VersionManager({
       <div className="mb-4 flex items-start justify-between gap-3">
         <div>
           <h2 className="text-lg font-semibold tracking-tight text-slate-900">版本管理</h2>
-          <p className="mt-1 text-sm leading-6 text-slate-500">为不同岗位维护多份简历版本，切换时不会丢失各自的模板、语言和内容。</p>
+          <p className="mt-1 text-sm leading-6 text-slate-500">
+            为不同岗位维护多份简历版本，切换时不会丢失各自的模板、语言和内容。
+          </p>
         </div>
         <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600">
           {resumes.length} 份简历
@@ -91,4 +93,3 @@ export function VersionManager({
     </section>
   );
 }
-

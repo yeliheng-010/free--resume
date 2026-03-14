@@ -49,34 +49,14 @@ export function WorkEditor({ items, onChange }: WorkEditorProps) {
         <EditorItemCard
           key={item.id}
           title={`工作经历 ${index + 1}`}
-          subtitle="重点写结果，不只写职责。优先量化影响。"
+          subtitle="重点写结果，而不只写职责。优先量化影响。"
           onDelete={() => deleteItem(item.id)}
         >
           <div className="grid gap-3 sm:grid-cols-2">
-            <FormInput
-              label="公司"
-              value={item.company}
-              onChange={(value) => onChange(updateItem(items, index, { company: value }))}
-              placeholder="Acme Tech"
-            />
-            <FormInput
-              label="职位"
-              value={item.position}
-              onChange={(value) => onChange(updateItem(items, index, { position: value }))}
-              placeholder="Frontend Engineer"
-            />
-            <FormInput
-              label="开始时间"
-              value={item.startDate}
-              onChange={(value) => onChange(updateItem(items, index, { startDate: value }))}
-              placeholder="2023.07"
-            />
-            <FormInput
-              label="结束时间"
-              value={item.endDate}
-              onChange={(value) => onChange(updateItem(items, index, { endDate: value }))}
-              placeholder="Present"
-            />
+            <FormInput label="公司" value={item.company} onChange={(value) => onChange(updateItem(items, index, { company: value }))} placeholder="Acme Tech" />
+            <FormInput label="职位" value={item.position} onChange={(value) => onChange(updateItem(items, index, { position: value }))} placeholder="Frontend Engineer" />
+            <FormInput label="开始时间" value={item.startDate} onChange={(value) => onChange(updateItem(items, index, { startDate: value }))} placeholder="2023.07" />
+            <FormInput label="结束时间" value={item.endDate} onChange={(value) => onChange(updateItem(items, index, { endDate: value }))} placeholder="Present" />
           </div>
 
           <FormTextarea
@@ -85,7 +65,7 @@ export function WorkEditor({ items, onChange }: WorkEditorProps) {
             rows={5}
             value={arrayToLines(item.description)}
             onChange={(value) => onChange(updateItem(items, index, { description: linesToArray(value) }))}
-            placeholder="例如：\nBuilt and maintained a multi-tenant dashboard.\nReduced first-screen loading time by 32%."
+            placeholder={"例如：\nBuilt and maintained a multi-tenant dashboard.\nReduced first-screen loading time by 32%."}
           />
         </EditorItemCard>
       ))}
@@ -96,4 +76,3 @@ export function WorkEditor({ items, onChange }: WorkEditorProps) {
     </EditorSection>
   );
 }
-

@@ -70,9 +70,7 @@ const EN_SAMPLE_RESUME_DATA: ResumeData = {
       role: "Fullstack Developer",
       startDate: "2023.11",
       endDate: "2024.01",
-      description: [
-        "Created KPI dashboards and custom filtering pipelines for merchandising teams.",
-      ],
+      description: ["Created KPI dashboards and custom filtering pipelines for merchandising teams."],
       technologies: ["React", "Node.js", "PostgreSQL"],
     },
   ],
@@ -163,9 +161,7 @@ const ZH_SAMPLE_RESUME_DATA: ResumeData = {
       role: "全栈开发",
       startDate: "2023.11",
       endDate: "2024.01",
-      description: [
-        "为业务团队搭建关键指标看板与自定义筛选能力，支持多维分析。",
-      ],
+      description: ["为业务团队搭建关键指标看板与自定义筛选能力，支持多维分析。"],
       technologies: ["React", "Node.js", "PostgreSQL"],
     },
   ],
@@ -213,4 +209,3 @@ export function createSampleResumeVersion(options?: Partial<Pick<ResumeVersion, 
     updatedAt: now,
   };
 }
-

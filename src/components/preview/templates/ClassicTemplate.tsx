@@ -18,6 +18,7 @@ export function ClassicTemplate({ resume }: ClassicTemplateProps) {
   const contactItems = [basics.phone, basics.email, basics.location].filter(Boolean);
   const profileLinks = [basics.website, basics.github, basics.linkedin].filter(Boolean);
   const hasPhoto = Boolean(basics.photo);
+  const techLabel = resume.language === "zh" ? "技术栈" : "Tech";
 
   const sectionRenderers: Record<ResumeSectionKey, React.ReactNode | null> = {
     summary: basics.summary ? (
@@ -69,7 +70,7 @@ export function ClassicTemplate({ resume }: ClassicTemplateProps) {
             ) : null}
             {item.technologies.length > 0 ? (
               <p className="mt-2 text-slate-600">
-                <span className="font-semibold text-slate-700">Tech:</span> {item.technologies.join(", ")}
+                <span className="font-semibold text-slate-700">{techLabel}:</span> {item.technologies.join(", ")}
               </p>
             ) : null}
           </article>
@@ -163,4 +164,3 @@ export function ClassicTemplate({ resume }: ClassicTemplateProps) {
     </div>
   );
 }
-
