@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --font-body-family: "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-heading-family: "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --resume-accent: #0f172a;
+  --resume-accent-soft: #e2e8f0;
+  --resume-accent-muted: #475569;
+  --resume-border: #cbd5e1;
+  --resume-sidebar: #f8fafc;
+  --resume-chip: #f1f5f9;
+  --paper-width: 794px;
+  --paper-ratio: 1.4142;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body-family);
+  --font-heading: var(--font-heading-family);
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body-family);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading-family);
+}
+
+::selection {
+  background: rgba(15, 23, 42, 0.12);
+}
+
+.resume-stage {
+  display: flex;
+  justify-content: center;
+  border-radius: 32px;
+  padding: 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(226, 232, 240, 0.48));
+  box-shadow: 0 28px 60px rgba(15, 23, 42, 0.08);
+}
+
+.resume-paper {
+  width: min(100%, var(--paper-width));
+  min-height: calc(min(100%, var(--paper-width)) * var(--paper-ratio));
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  border-radius: 28px;
+  background: white;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.14);
+}
+
+.resume-paper--classic {
+  background: linear-gradient(180deg, #fffefb 0%, #ffffff 25%, #fffefc 100%);
+}
+
+.resume-paper--modern {
+  background: linear-gradient(180deg, #ffffff 0%, #fcfdff 100%);
+}
+
+.preview-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.resume-section,
+.resume-entry,
+.resume-keep {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+@media (max-width: 1023px) {
+  .preview-panel {
+    position: static;
+  }
+
+  .resume-stage {
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html,
+  body {
+    background: white !important;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-area {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .preview-panel,
+  .resume-stage {
+    position: static !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  .resume-paper {
+    width: 210mm !important;
+    min-height: 297mm !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+
+  #resume-print-root {
+    overflow: visible !important;
+  }
+
+  .resume-section,
+  .resume-entry,
+  .resume-keep {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
